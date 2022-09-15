@@ -1,0 +1,17 @@
+query getTradePrices {
+  tradeprices(first: 1) {
+    data {
+      coal
+      oil
+      uranium
+      iron
+      bauxite
+      lead
+      gasoline
+      munitions
+      steel
+      aluminum
+      food
+    }
+  }
+}
