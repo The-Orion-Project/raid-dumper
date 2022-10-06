@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install dependencies
-        run: wget https://github.com/The-Orion-Project/raid-dumper/releases/download/master/raids-dumper-linux -O raids-dumper
       - name: Create .env
         run: |
           touch .env
           echo "${{ secrets.INJECT_ENV }}" > .env
+      - name: Install dependencies
+        run: wget https://github.com/The-Orion-Project/raid-dumper/releases/download/master/raids-dumper-linux -O raids-dumper
       - name: run dumper
         run: |
           chmod +x raids-dumper
